@@ -1,0 +1,19 @@
+[package]
+name = "monitor"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+sysinfo = "0.29"
+chrono = "0.4"
+plotters = "0.3"
+csv = "1.1"
+windows = { version = "0.44", features = [
+    "Win32_System_Wmi",
+    "Win32_System_Com",
+    "Win32_Foundation",
+    "Win32_System_Ole",
+    "Win32_Security_Authorization"
+]}
+winapi = { version = "0.3", features = ["fileapi", "sysinfoapi"] }
