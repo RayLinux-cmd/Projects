@@ -4,13 +4,21 @@ It allows users to add, edit, search, delete, sort, and view clothing items (pre
 It’s a tidy little project to demonstrate linked lists, template programming, sorting algorithms, and basic menu navigation.
 
 Features
+
 -Add new clothing items to your virtual wardrobe
+
 -Search clothes by a specific characteristic
+
 -Edit item details in-place
+
 -Delete garments by position
+
 -Sort items alphabetically using QuickSort
+
 -Display your full wardrobe
+
 -All via a clean terminal menu interface
+
 
 Requirements
 To run this program, you’ll need:
