@@ -22,8 +22,11 @@ Features
 
 Requirements
 To run this program, you’ll need:
+
 -A C++ compiler (g++ recommended)
+
 -A terminal to compile and run the program
+
 
 Minimum C++ Standard:
 -C++11 or higher (because of auto, lambda functions, and extended STL usage)
