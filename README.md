@@ -21,6 +21,7 @@ Minimum C++ Standard:
 -C++11 or higher (because of auto, lambda functions, and extended STL usage)
 
 After running the program, you’ll be presented with a simple menu:
+
 ----- MENU -----
 1. Agregar prenda
 2. Buscar prenda por caracteristica
