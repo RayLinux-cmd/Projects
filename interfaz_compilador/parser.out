@@ -1,0 +1,157 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> declaracion
+Rule 1     declaracion -> VAR IDENTIFICADOR ASIGNACION expresion
+Rule 2     declaracion -> LET IDENTIFICADOR ASIGNACION expresion
+Rule 3     declaracion -> CONST IDENTIFICADOR ASIGNACION expresion
+Rule 4     expresion -> NUMERO
+Rule 5     expresion -> CADENA
+
+Terminals, with rules where they appear
+
+ASIGNACION           : 1 2 3
+CADENA               : 5
+CONST                : 3
+IDENTIFICADOR        : 1 2 3
+LET                  : 2
+NUMERO               : 4
+VAR                  : 1
+error                : 
+
+Nonterminals, with rules where they appear
+
+declaracion          : 0
+expresion            : 1 2 3
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . declaracion
+    (1) declaracion -> . VAR IDENTIFICADOR ASIGNACION expresion
+    (2) declaracion -> . LET IDENTIFICADOR ASIGNACION expresion
+    (3) declaracion -> . CONST IDENTIFICADOR ASIGNACION expresion
+
+    VAR             shift and go to state 2
+    LET             shift and go to state 3
+    CONST           shift and go to state 4
+
+    declaracion                    shift and go to state 1
+
+state 1
+
+    (0) S' -> declaracion .
+
+
+
+state 2
+
+    (1) declaracion -> VAR . IDENTIFICADOR ASIGNACION expresion
+
+    IDENTIFICADOR   shift and go to state 5
+
+
+state 3
+
+    (2) declaracion -> LET . IDENTIFICADOR ASIGNACION expresion
+
+    IDENTIFICADOR   shift and go to state 6
+
+
+state 4
+
+    (3) declaracion -> CONST . IDENTIFICADOR ASIGNACION expresion
+
+    IDENTIFICADOR   shift and go to state 7
+
+
+state 5
+
+    (1) declaracion -> VAR IDENTIFICADOR . ASIGNACION expresion
+
+    ASIGNACION      shift and go to state 8
+
+
+state 6
+
+    (2) declaracion -> LET IDENTIFICADOR . ASIGNACION expresion
+
+    ASIGNACION      shift and go to state 9
+
+
+state 7
+
+    (3) declaracion -> CONST IDENTIFICADOR . ASIGNACION expresion
+
+    ASIGNACION      shift and go to state 10
+
+
+state 8
+
+    (1) declaracion -> VAR IDENTIFICADOR ASIGNACION . expresion
+    (4) expresion -> . NUMERO
+    (5) expresion -> . CADENA
+
+    NUMERO          shift and go to state 12
+    CADENA          shift and go to state 13
+
+    expresion                      shift and go to state 11
+
+state 9
+
+    (2) declaracion -> LET IDENTIFICADOR ASIGNACION . expresion
+    (4) expresion -> . NUMERO
+    (5) expresion -> . CADENA
+
+    NUMERO          shift and go to state 12
+    CADENA          shift and go to state 13
+
+    expresion                      shift and go to state 14
+
+state 10
+
+    (3) declaracion -> CONST IDENTIFICADOR ASIGNACION . expresion
+    (4) expresion -> . NUMERO
+    (5) expresion -> . CADENA
+
+    NUMERO          shift and go to state 12
+    CADENA          shift and go to state 13
+
+    expresion                      shift and go to state 15
+
+state 11
+
+    (1) declaracion -> VAR IDENTIFICADOR ASIGNACION expresion .
+
+    $end            reduce using rule 1 (declaracion -> VAR IDENTIFICADOR ASIGNACION expresion .)
+
+
+state 12
+
+    (4) expresion -> NUMERO .
+
+    $end            reduce using rule 4 (expresion -> NUMERO .)
+
+
+state 13
+
+    (5) expresion -> CADENA .
+
+    $end            reduce using rule 5 (expresion -> CADENA .)
+
+
+state 14
+
+    (2) declaracion -> LET IDENTIFICADOR ASIGNACION expresion .
+
+    $end            reduce using rule 2 (declaracion -> LET IDENTIFICADOR ASIGNACION expresion .)
+
+
+state 15
+
+    (3) declaracion -> CONST IDENTIFICADOR ASIGNACION expresion .
+
+    $end            reduce using rule 3 (declaracion -> CONST IDENTIFICADOR ASIGNACION expresion .)
+
