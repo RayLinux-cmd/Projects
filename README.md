@@ -137,15 +137,3 @@ Ejecuta el programa como administrador si necesitas acceso completo a todas las 
 ### Temperatura No Disponible
 Si no se puede obtener la temperatura, el programa continuará funcionando sin esta métrica.
 
-## Contribuciones
-
-Las contribuciones son bienvenidas. Por favor:
-1. Fork el repositorio
-2. Crea una rama para tu feature
-3. Commit tus cambios
-4. Push a la rama
-5. Abre un Pull Request
-
-## Licencia
-
-Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
